@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Announcement</title>
+  <style>
+    .announcement-heading {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #1a365d;
+      margin-bottom: 24px;
+    }
+    .notice-box {
+      position: relative;         
+      max-width: 650px;
+      height: 220px;               
+      margin: 0 auto;
+      background-color: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 6px solid #3182ce;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      
+      
+      padding: 30px 24px;          
+      box-sizing: border-box;
+      overflow-y: auto;             
+      
+      font-family: Arial, sans-serif;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+
+    
+    .notice-img {
+      float: left;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 18px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    .notice-badge {
+      position: absolute;          
+      top: 12px;
+      right: 12px;
+      background-color: #e53e3e;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="announcement-container">
+   
+    <h2 class="announcement-heading">Important Notice</h2>
+
+    
+    <div class="notice-box">
+      
+      <span class="notice-badge">NEW</span>
+
+      
+      <img 
+        src="NOTICE.jpg" 
+        alt="School Event" 
+        class="notice-img"
+      >
+
+     
+      <p>
+        <strong>Annual Parent-Teacher Conference:</strong> Please note that the upcoming Parent-Teacher Conference has been scheduled for this Friday starting at 3:00 PM in the Main Auditorium. Parents are requested to collect their progress reports from the administrative office prior to attending. 
+      </p>
+      <p>
+        If you are unable to attend in person, please schedule a virtual session with your student's counselor through the online parent portal before Wednesday evening.
+      </p>
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </section>
+
+</body>
+</html>
