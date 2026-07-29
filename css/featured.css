@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+.body {
+  margin: 0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+    background:rgb(159, 159, 237);
+    padding:20px;
+}
+.blog-section{
+    text-align:center;
+    margin-bottom:20px;
+}
+.blog-section h1{
+  text-align: center;
+  margin-bottom:20px;
+}
+.blog-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.blog{
+  width: 300px;
+  background:white;
+  border:2px,soild;
+  border-radius: 10px;
+  text-align:center;
+  box-shadow: 0 2px 8px;
+  padding:15px;
+}
+.blog img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+img [src $=".jpg"]{
+border-top-right-radius:25px;
+border-bottom-left-radius:25px;
+}
+a[href^="https"]{
+  color:red;
+  font-weight:bold;
+}
+@media  (max-width:600px){
+  .container-blog{
+  flex-direction:column;
+  align-items:center;
+  }
+  body{
+    font-size:14px;
+  }
+}
+@media (orientation-portrait){
+  .blog.section{
+    background:lightblue;
+  }
+}
