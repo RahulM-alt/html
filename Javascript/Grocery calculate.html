@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery calculator</title>
+  </head>
+  <body>
+    <script>
+      // items
+      var rice = "Rice";
+      var sugar = "Sugar";
+      var wheat = "Wheat";
+      //price
+      var riceprice = 50;
+      var sugarprice = 45;
+      var wheatprice = 40;
+      //Quantity
+      var ricequantity = 2;
+      var sugarquantity = 3;
+      var wheatquantity = 4;
+      //cost
+      var ricecost = riceprice * ricequantity;
+      var sugarcost = sugarprice * sugarquantity;
+      var wheatcost = wheatprice * wheatquantity;
+      //display
+      console.log(rice + "cost: $" + ricecost);
+      console.log(sugar + "cost: $" + sugarcost);
+      console.log(wheat + "cost: $" + wheatcost);
+      //total
+      var totalbill = ricecost + sugarcost + wheatcost;
+      //totalbilldisplay
+      console.log("Total Bill: $" + totalbill);
+      //upadte rice quantity
+      ricequantity = 4;
+      //update ricecost and totalbill
+      ricecost = ricequantity * riceprice;
+      totalbill = ricecost + sugarcost + wheatcost;
+      //display ricecost and totalbill
+      console.log("Updated rice cost: $" + ricecost);
+      console.log("updated totalbill: $" + totalbill);
+    </script>
+  </body>
+</html>
