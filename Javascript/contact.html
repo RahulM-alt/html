@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contract manager app</title>
+  </head>
+  <body>
+    <script>
+    let contact1 = {
+    name: "Rahul",
+    phone: "9876543210",
+    email: "rahul@gmail.com",
+
+    getInfo: function() {
+        return "Name: " + this.name +
+               ", Phone: " + this.phone +
+               ", Email: " + this.email;
+    }
+};
+
+function printContactInfo(contact) {
+    console.log(contact.getInfo());
+}
+
+let contact2 = {
+    name: "Arun",
+    phone: "9876543211",
+    email: "arun@gmail.com",
+
+    getInfo: function() {
+        return "Name: " + this.name +
+               ", Phone: " + this.phone +
+               ", Email: " + this.email;
+    }
+};
+
+printContactInfo(contact1);
+printContactInfo(contact2);
+
+</script>
+  </body>
+</html>
