@@ -1,0 +1,30 @@
+<input type="text" id="name" placeholder="Enter your name">
+<input type="text" id="index1" placeholder="enter your index1">
+<input type="text" id="index2" placeholder="enter your index2">
+<button onclick="showName()">Print</button>
+
+<p id="result"></p>
+
+<script>
+function showName() {
+    var name = document.getElementById("name").value;
+
+    var firstName = name.slice(0, 3);
+
+    document.getElementById("result").innerHTML = firstName;
+
+    var index1 = document.getElementById("index1").value;
+
+    var index = index1.slice(0, 3);
+
+    document.getElementById("result").innerHTML = index;
+
+    var index2 = document.getElementById("index2").value;
+
+    var index2 = index2.slice(0, 3);
+
+    document.getElementById("result").innerHTML = index2;
+
+    
+}
+</script>

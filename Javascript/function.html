@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+
+<p id="paragraph">Hello World</p>
+
+<h1 id="heading"></h1>
+
+<script>
+    var text = document.getElementById("paragraph").innerHTML;
+
+    console.log(text);
+
+    document.getElementById("heading").innerHTML = text;
+
+    console.log(document.getElementById("heading").innerHTML);
+</script>
+
+</body>
+</html>

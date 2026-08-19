@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mashup stack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   <style>
+body{
+    background:#f8f9fa;
+}
+.sidebar{
+    height:100vh;
+    overflow-y:auto;
+    border-right:1px solid #ddd;
+    background:#fff;
+}
+.rightbar{
+    height:100vh;
+    overflow-y:auto;
+    border-left:1px solid #ddd;
+    background:#fff;
+}
+.content{
+    height:100vh;
+    overflow-y:auto;
+    background:#fff;
+}
+.nav-link{
+    color:#555;
+}
+.nav-link:hover{
+    background:#f1f1f1;
+}
+.active-link{
+    background:#dbeafe;
+    color:#0d6efd;
+    font-weight:bold;
+}
+.logo{
+    font-size:25px;
+    color:#e91e63;
+    font-weight:bold;
+}
+.card-img{
+    height:250px;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<div class="container-fluid">
+
+<a class="navbar-brand logo" href="#">mashupstack</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<ul class="navbar-nav mx-auto">
+
+    <li class="nav-item">
+        <a class="nav-link" href="#">Evaluation</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#">Placements</a>
+    </li>
+
+    <!-- Interview Dropdown -->
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="interviewDropdown"
+       role="button"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+        Interview
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="interviewDropdown">
+        <a class="dropdown-item" href="#">View Resume</a>
+        <a class="dropdown-item" href="#">Tech Interview</a>
+        <a class="dropdown-item" href="#">HR Interview</a>
+        <a class="dropdown-item" href="#">Revision module</a>
+    </div>
+</li>
+   <!-- Learn Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="learnDropdown"
+       role="button"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+        Learn
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="learnDropdown">
+        <a class="dropdown-item" href="#">Learn</a>
+    </div>
+</li>
+
+<!-- Analytics Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="analyticsDropdown"
+       role="button"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+        Analytics
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="analyticsDropdown">
+        <a class="dropdown-item" href="#">Leaderboard</a>
+    </div>
+</li>
+            <div class="mt-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+  <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+</svg>
+</div>
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="interviewDropdown"
+       role="button"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+        Profile
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="interviewDropdown">
+        <a class="dropdown-item disabled" href="#">Rahul M</a>
+        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">Setting</a>
+        <a class="dropdown-item" href="#">Rules and Regulation</a>
+    </div>
+</li>
+
+
+
+</div>
+</div>
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- Left Sidebar -->
+
+<div class="col-md-2 sidebar p-3">
+
+<ul class="nav flex-column">
+
+<li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#">Grids</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#">Progress Bar</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#">Spinners</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#">Pagination</a></li>
+
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="col-md-8 content p-4">
+
+<div class="d-flex justify-content-between mb-4">
+
+<button class="btn btn-outline-secondary">&lt; Prev</button>
+
+<button class="btn btn-outline-secondary">Next &gt;</button>
+
+</div>
+
+<h2 class="text-primary">Introduction</h2>
+
+<p class="text-muted">
+Dropdown menus are toggleable contextual menus for displaying links in a list format.
+To use dropdowns, wrap the menu within the <code>.dropdown</code> class.
+</p>
+
+<div class="card shadow-sm">
+
+
+<div class="card-body">
+
+
+
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#">Action</a></li>
+<li><a class="dropdown-item" href="#">Another Action</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="#">Something Else</a></li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Right Sidebar -->
+
+<div class="col-md-2 rightbar p-3">
+
+<h6 class="text-primary">Introduction</h6>
+
+<ul class="nav flex-column">
+
+<li><a class="nav-link active-link" href="#">Introduction</a></li>
+
+<li><a class="nav-link" href="#">Basic Dropdown</a></li>
+
+<li><a class="nav-link" href="#">Divider</a></li>
+
+<li><a class="nav-link" href="#">Header</a></li>
+
+<li><a class="nav-link" href="#">Disabled & Active</a></li>
+
+<li><a class="nav-link" href="#">Position</a></li>
+
+<li><a class="nav-link" href="#">Dropup</a></li>
+
+<li><a class="nav-link" href="#">Dropdown Text</a></li>
+
+<li><a class="nav-link" href="#">Button Group</a></li>
+
+<li><a class="nav-link" href="#">Split Button</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</html>
