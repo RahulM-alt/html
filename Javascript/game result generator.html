@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Result Generator</title>
+</head>
+<body>
+
+    <h1>Game Result Generator</h1>
+
+    <button onclick="gameResult()">Generate Result</button>
+
+    <script>
+        function gameResult() {
+
+            // Random number between 1 and 50
+            let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+
+            // User input as string
+            let userInput = prompt("Enter your score:");
+
+            // Convert string to number
+            let score = Number(userInput);
+
+            // Absolute difference
+            let difference = Math.abs(mysteryLevel - score);
+            console.log("Mystery Level:", mysteryLevel);
+            console.log("Absolute Difference:", difference);
+
+            // Square root
+            let squareRoot = Math.sqrt(score);
+            console.log("Square Root:", squareRoot);
+
+            // Value of Pi
+            console.log("Value of Pi:", Math.PI);
+
+            // Implicit conversion
+            let result = "20" * 5;
+            console.log("20 * 5 =", result);
+
+            // Maximum and minimum
+            let highest = Math.max(10, 20, mysteryLevel);
+            let lowest = Math.min(10, 20, mysteryLevel);
+
+            console.log("Highest Value:", highest);
+            console.log("Lowest Value:", lowest);
+        }
+    </script>
+
+</body>
+</html>
