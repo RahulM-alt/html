@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World</title>
+    <title>Statistics Widget</title>
 </head>
 <body>
-    <p id = "random"></p>
     <script>
-       var randomnumber = Math.floor(Math.random() * 100 + 1);
+       var randomnumber = Math.floor(Math.random() * 100) + 1;
        var userscore = "75"
-       var scorenumber = number(userscore);
+       var scorenumber = Number(userscore);
        var differnce = randomnumber - scorenumber
        var squareroot = Math.round(Math.sqrt(scorenumber));
-       var pi = Math.PI(scorenumber);
-       console.log(randomnumber);
+       var pi = Math.PI;
+       var result = "50" * 2;
+      console.log("Random Number:", randomnumber);
+       console.log("userscore:", userscore);
+       console.log("difference between randomnumber and userscore:", differnce);
+       console.log("the rounded square root of the user score:", squareroot);
+       console.log("PI:", pi);
+       console.log("50 * 2:", result);
        </script>
     
 </body>
