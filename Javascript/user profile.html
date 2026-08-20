@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>User Profile</h2>
+    <button onclick="checkaccess()">check</button>
+    <p id="result"></p>
+    <script>
+        let user = {
+            name: "Rahul",
+            age: 21,
+            admin: true,
+        };
+        function checkaccess(){
+
+        let access = (user.age >=18 &&user.admin)
+        ? "Access Granted"
+        : "Acess Denied";
+        let ageexists = "age" in user;
+        console.log("Age Property Exist:", ageexists);
+        delete user.age;
+        console.log("User after delecting age:", user);
+        document.getElementById("result").innerHTML = access + "<br>Age property exists:" + ageexists;
+
+        }
+    </script>
+</body>
+</html>
