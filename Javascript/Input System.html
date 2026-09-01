@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Guess a number Game</h2>
+    <script>
+      let validchances = 0;
+      while (validchances < 5) {
+        let input = prompt("Enter a number between 1 - 5");
+        if (input < 1 || input > 5 || isNaN(input)) {
+          alert("invalid output");
+          continue;
+        }
+        validchances++;
+        switch (input) {
+          case 1:
+            alert("You entered one");
+            break;
+          case 2:
+            alert("You entered two");
+            break;
+          case 3:
+            alert("You entered three");
+            break;
+          case 4:
+            alert("You entered four");
+            break;
+          case 5:
+            alert("You entered five");
+            break;
+        }
+        if (input == 3) {
+          alert("You guess right");
+          break;
+        } else {
+          alert("Wrong guess try again");
+        }
+        if (validchances === 5) {
+          alert("gameover");
+        }
+      }
+    </script>
+  </body>
+</html>
