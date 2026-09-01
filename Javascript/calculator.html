@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h2>Store Calculator</h2>
+    <script>
+        for (let i = 1; i<=5;){
+        let code = Number(prompt("enter product code(1-3):"));
+        let quantity = Number (prompt("enter quantity:"));
+
+        let price;
+        let product;
+
+        switch (code){
+            case 1:
+                product = "apple";
+                price = 30
+                break;
+                
+                case 2:
+                    product = "orange"
+                    price = 50;
+                    break;
+
+                    case 3:
+                        product = "mango"
+                        price = 20;
+                        break;
+
+                        deafult:
+                        alert("invaild product code!");
+                        continue;
+        }
+        let total = price * quantity;
+        alert("product:" + product + "total price:" + total);
+
+        if(total > 100){
+            alert("high purchase")
+        }
+        else{
+            alert("Normal price")
+        }
+        i++;
+    }
+    </script>
+</body>
+</html>
