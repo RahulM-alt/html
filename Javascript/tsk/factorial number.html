@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number = parseInt(prompt("Enter a postive number"))
+        //check it a negative number
+        if(number<0){
+            console.log("the number is a negative  factorial does not exist")
+        }
+        //if it a 0
+        else if(number==0){
+            console.log("the number is" + number + "is 1")
+        }
+        else{let fact = 1;
+            for( let i=1; i<number; i++){
+                fact*=i;
+                console.log("the factorial number is" + fact)
+            }
+        }
+    </script>
+</body>
+</html>

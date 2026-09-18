@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>input</title>
+  </head>
+  <body>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <p id="input"></p>
+    <script>
+      function displayDate() {
+        let inputData = document.getElementById("name").value;
+        document.getElementById("input").innerHTML = inputData;
+      }
+      document.getElementById("name").addEventListener("input", displayDate);
+    </script>
+  </body>
+</html>

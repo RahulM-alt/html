@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const lowernumber = parseInt(prompt("enter a postive lower number"))
+        const highernumber = parseInt(prompt("Enter a postive higher number"))
+        console.log("armstrong number")
+        for(let i = lowernumber; i<= highernumber; i++){
+            let numberOfDigits = i.toString().length;
+
+            let sum=0;
+            let temp = i;
+            while (temp>0) {
+                let remainder = temp % 10;
+                sum += remainder ** numberOfDigits;
+                temp = parseInt(temp/10);
+            }
+            if(sum==i){
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

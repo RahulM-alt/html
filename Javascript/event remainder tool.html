@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Reminder</title>
+</head>
+<body>
+
+<h2>Event Reminder</h2>
+
+<input type="date" id="date">
+<button onclick="checkDate()">Check</button>
+
+<p id="output"></p>
+
+<script>
+function checkDate() {
+    let d = new Date(document.getElementById("date").value);
+    let today = new Date();
+
+    let year = d.getFullYear();
+    let month = d.toLocaleString("default", {month: "long"});
+    let day = d.getDate();
+
+    let years = today.getFullYear() - year;
+
+    if (today.getMonth() < d.getMonth() ||
+        (today.getMonth() == d.getMonth() && today.getDate() < day)) {
+        years--;
+    }
+
+    let message;
+
+    if (years >= 1)
+        message = "It has been more than a year since that date.";
+    else
+        message = "It has been less than a year since that date.";
+
+    document.getElementById("output").innerHTML =
+        year + " " + month + " " + day + "<br>" +
+        "Full years passed: " + years + "<br>" +
+        message;
+}
+</script>
+
+</body>
+</html>

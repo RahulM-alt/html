@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!
+    , initial-scale=1.0">
+    <title>Rearrange</title>
+</head>
+<body>
+   <script>
+    const numbers = [3, 0, 7, , 0, 5];
+
+const nonZero = numbers.filter(num => num !== 0);
+const zeros = numbers.filter(num => num === 0);
+
+const result = [...nonZero, ...zeros];
+
+console.log(result); // [3, 7, 5, 0, 0]
+   </script> 
+</body>
+</html>

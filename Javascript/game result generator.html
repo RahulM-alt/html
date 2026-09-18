@@ -12,28 +12,21 @@
     <script>
         function gameResult() {
 
-            // Random number between 1 and 50
             let mysteryLevel = Math.floor(Math.random() * 50) + 1;
 
-            // User input as string
             let userInput = prompt("Enter your score:");
 
-            // Convert string to number
             let score = Number(userInput);
 
-            // Absolute difference
             let difference = Math.abs(mysteryLevel - score);
             console.log("Mystery Level:", mysteryLevel);
             console.log("Absolute Difference:", difference);
 
-            // Square root
             let squareRoot = Math.sqrt(score);
             console.log("Square Root:", squareRoot);
 
-            // Value of Pi
             console.log("Value of Pi:", Math.PI);
 
-            // Implicit conversion
             let result = "20" * 5;
             console.log("20 * 5 =", result);
 

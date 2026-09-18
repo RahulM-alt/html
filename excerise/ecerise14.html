@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="copyed"></p>
+    <input id="copy" onkeyup = display()>
+    <script>
+        var copyed = document.getElementById("copyed")
+        var copy = document.getElementById("copy")
+        function display(){
+            copyed.textContent=copy.value
+        }
+        display(
+
+        )
+    </script>
+</body>
+</html>

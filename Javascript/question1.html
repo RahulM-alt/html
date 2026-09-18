@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Edit</title>
+</head>
+<body>
+
+<p id="para">I love JavaScript</p>
+
+<input type="text" id="input">
+
+<script>
+let para = document.getElementById("para");
+let input = document.getElementById("input");
+
+input.style.display = "none";
+
+para.addEventListener("dblclick", function () {
+
+    
+    input.value = para.innerText;
+
+    
+    para.style.display = "none";
+
+    
+    input.style.display = "block";
+
+    
+    input.focus();
+});
+
+
+document.addEventListener("click", function (event) {
+
+    if (event.target !== para && event.target !== input) {
+
+        
+        para.innerText = input.value;
+
+        
+        input.style.display = "none";
+
+        
+        para.style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>
+

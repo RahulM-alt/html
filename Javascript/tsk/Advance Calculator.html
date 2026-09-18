@@ -1,0 +1,185 @@
+Here is an advanced version with a better design, keyboard Enter support, error messages, and calculation history.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #0f172a, #2563eb);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .calculator {
+      width: min(90%, 480px);
+      padding: 30px;
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input, select {
+      border: 1px solid #cbd5e1;
+    }
+
+    button {
+      margin-top: 15px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #result {
+      min-height: 30px;
+      margin: 20px 0 10px;
+      color: #166534;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #history {
+      padding-left: 0;
+      text-align: left;
+      list-style: none;
+    }
+
+    #history li {
+      margin-top: 8px;
+      padding: 10px;
+      border-radius: 6px;
+      background: #eff6ff;
+    }
+
+    .clear-button {
+      background: #dc2626;
+    }
+
+    .clear-button:hover {
+      background: #b91c1c;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="calculator">
+    <h1>Calculator</h1>
+
+    <div class="inputs">
+      <input type="text" id="num1" placeholder="First number">
+      <input type="text" id="num2" placeholder="Second number">
+    </div>
+
+    <select id="operator">
+      <option value="+">Addition (+)</option>
+      <option value="-">Subtraction (−)</option>
+      <option value="*">Multiplication (×)</option>
+      <option value="/">Division (÷)</option>
+    </select>
+
+    <button onclick="calculator()">Calculate</button>
+
+    <p id="result"></p>
+
+    <h3>History</h3>
+    <ul id="history"></ul>
+
+    <button class="clear-button" onclick="clearHistory()">Clear History</button>
+  </main>
+
+  <script>
+    function calculator() {
+      let input1 = document.getElementById("num1").value.trim();
+      let input2 = document.getElementById("num2").value.trim();
+      let operator = document.getElementById("operator").value;
+      let resultBox = document.getElementById("result");
+      let history = document.getElementById("history");
+
+      let a = Number(input1);
+      let b = Number(input2);
+
+      if (input1 === "" || input2 === "" || !Number.isFinite(a) || !Number.isFinite(b)) {
+        resultBox.textContent = "Please enter valid numbers.";
+        resultBox.style.color = "red";
+        return;
+      }
+
+      let result;
+
+      if (operator === "+") {
+        result = a + b;
+      } else if (operator === "-") {
+        result = a - b;
+      } else if (operator === "*") {
+        result = a * b;
+      } else if (operator === "/") {
+        if (b === 0) {
+          resultBox.textContent = "Cannot divide by zero.";
+          resultBox.style.color = "red";
+          return;
+        }
+
+        result = a / b;
+      }
+
+      let answer = result.toFixed(2);
+
+      resultBox.textContent = "Answer: " + answer;
+      resultBox.style.color = "green";
+
+      let calculation = document.createElement("li");
+      calculation.textContent = a + " " + operator + " " + b + " = " + answer;
+
+      history.prepend(calculation);
+    }
+
+    function clearHistory() {
+      document.getElementById("history").innerHTML = "";
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        calculator();
+      }
+    });
+  </script>
+</body>
+</html>
+```
+
